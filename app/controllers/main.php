@@ -3,11 +3,11 @@
 /**
 * 
 */
-class Home extends Controller
+class Main extends Controller
 {
 	public function index($name = '')
 	{
-		$this->view('home/index', ['name'=>$user->name]);
+		$this->view('main/index', ['name'=>$user->name]);
 	}
 
 	public function create($username='', $email='')

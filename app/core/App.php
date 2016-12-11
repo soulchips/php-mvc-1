@@ -2,7 +2,7 @@
 
 class App 
 {
-	protected $controller = 'home';
+	protected $controller = 'main';
 	
 	protected $method = 'index';
 
@@ -36,11 +36,9 @@ class App
 		call_user_func_array([$this->controller, $this->method], $this->params);
 	}
 
-	/*
-	*Consider making protected. 
-	*Exploded and trims URL
-	*/
-	public function parseUrl()
+
+	//Explodes and trims URL
+	protected function parseUrl()
 	{
 		if(isset($_GET['url'])) 
 		{
